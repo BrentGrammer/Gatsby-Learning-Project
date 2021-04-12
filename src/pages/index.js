@@ -24,15 +24,16 @@ export default function Home({ data }) {
   )
 }
 
+// example of query inside a page (in a component you need to use a Gatsby hook - see Navbar.js)
 // can name the query what you want (SiteInfo)
 // This pulls site metadata added to our gatsby-config.js manually by us
-export const query = graphql`
-  query SiteInfo {
-    site {
-      siteMetadata {
-        description
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query SiteInfo {
+//     site {
+//       siteMetadata {
+//         description
+//         title
+//       }
+//     }
+//   }
+// `
