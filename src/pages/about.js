@@ -1,4 +1,5 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 /**
  * Gatsby looks at the file name and creates a route for it
@@ -7,8 +8,10 @@ import React from "react"
 
 export default () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>About</h1>
+      </div>
+    </Layout>
   )
 }
