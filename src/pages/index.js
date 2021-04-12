@@ -1,9 +1,12 @@
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
 
-export default function Home() {
+/**
+ * The data prop is builtin and comes from our GraphQL query
+ */
+export default function Home({ data }) {
   return (
     <Layout>
       <section className={styles.header}>
@@ -20,3 +23,16 @@ export default function Home() {
     </Layout>
   )
 }
+
+// can name the query what you want (SiteInfo)
+// This pulls site metadata added to our gatsby-config.js manually by us
+export const query = graphql`
+  query SiteInfo {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`
